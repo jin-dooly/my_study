@@ -1,0 +1,59 @@
+1. React.memo -> 컴포넌트 메모이제이션
+   useCallback -> 함수 메모이제이션
+   useMemo -> 변수 메모이제이션
+
+useMemo는 함수를 실행해버리는데, useCallback은 함수를 반환합니다.
+
+useMemo는 deps 가 변한다면, () => fn이라는 함수를 실행하고, 그 함수의 반환 값을 반환합니다.
+useCallback 은 deps 가 변한다면, fn이라는 새로운! 함수를 반환한다.
+
+
+useMemo는 값을 반환하는데, 함수도 값으로 사용되기 때문에 useMemo로 함수를 사용할 수 있다.
+
+
+2022.06.15
+
+1. 동영상 오류 잡기 
+video가 없으면 video배열이 아예 비어있음. -> movie.videos?.results[0]?.key 여기에 ?를 사용하여 video가 있으면 다음으로 넘어가고 없으면 거기서 멈춘다. 때문에 key가 없다는 오류를 잡고 대신 존재하지 않는 동영상 url을 넘기기 때문에 동영상을 재생할 수 없다는 화면을 넘겨줄 수 있다.
+
+
+2. .js vs .jsx
+크게 차이는 없으나 통상적으로 컴포넌트를 분리하여 알아보기 위해 컴포넌트는 jsx로 사용하고 index나 APP은 js로 사용한다.
+
+
+3. 로그인 페이지 따라하기
+
+
+
+2023.06.22
+
+1. 
+
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+export default function Lists() {
+  const [users, setUsers] = useState([]);
+
+  const request = async () => {
+    const response = await axios.get("https://koreanjson.com/users");
+    console.log(response);
+    setUsers(response.data);
+    console.log(users);
+  };
+
+  useEffect(() => {
+    request();
+  }, []);
+
+  return (
+    <div className='list'>
+      {users.map((user) => (
+        <div>
+          <div>{user.name}</div>
+          <div>{user.username}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
