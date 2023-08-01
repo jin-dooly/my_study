@@ -1,3 +1,49 @@
 .hidden {
   display: none;
 }
+
+body {
+  width: 99vw;
+  height: 99vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body *{
+  list-style: none;
+  border: none;
+}
+
+#clock {
+  float: left;
+  margin: 5px 30px;
+  color: rgb(217, 224, 230);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5) ;
+}
+
+#weather {
+  float: right;
+  margin: 5px 30px;
+  color: aliceblue;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5) ;
+}
+
+#weather span{
+  display: block;
+}
+
+#greeting {
+  width: fit-content;
+  margin: 2px auto;
+  padding-top: 50px;
+}
+
+#todo-list {
+  width: 60vw;
+  height: 50vh;
+  background-color: rgba(240, 248, 255, 0.658);
+  border-radius: 50px;
+  margin: 0 auto;
+}
