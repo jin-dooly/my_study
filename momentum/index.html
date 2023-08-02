@@ -16,13 +16,15 @@
   </div>
   <form class="login-form hidden">
     <input type="text" placeholder="What is your name?" required maxlength="15" />
-    <input type="submit" value="Login"/>
   </form>
   <h1 id="greeting" class="hidden"></h1>
-  <form id="todo-form" action="" method="post">
-    <input type="text" name="" id="" placeholder="Write a To Do and Press Enter" required />
-  </form>
-  <ul id="todo-list"></ul>
+  <div id="todo" class="hidden">
+    <form id="todo-form">
+      <input type="text" name="" id="" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id="todo-list">
+    </ul>
+  </div>
   <div class="quote">
     <span></span>
     <span></span>

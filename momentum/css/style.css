@@ -12,7 +12,6 @@ body {
 }
 
 body *{
-  list-style: none;
   border: none;
 }
 
@@ -34,16 +33,93 @@ body *{
   display: block;
 }
 
+.login-form {
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 40vh;
+}
+
+.login-form input[type=text]{
+  width: 500px;
+  height: 60px;
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+  outline: none;
+  color: aliceblue;
+}
+
+.login-form input[type=text]::placeholder{
+  color: aliceblue;
+}
+
 #greeting {
   width: fit-content;
-  margin: 2px auto;
-  padding-top: 50px;
+  margin: 5px auto;
+  padding: 50px 0 30px 0;
+  font-size: 60px;
+  color: aliceblue;
+}
+
+#todo {
+  width: 600px;
+  height: 450px;
+  background-color: rgba(240, 248, 255, 0.658);
+  border-radius: 35px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+#todo-form input{
+  width: 96%;
+  height: 50px;
+  margin: 0 2%;
+  padding: 0;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
 }
 
 #todo-list {
-  width: 60vw;
-  height: 50vh;
-  background-color: rgba(240, 248, 255, 0.658);
-  border-radius: 50px;
-  margin: 0 auto;
+  width: 92%;
+  height: 80%;
+  overflow-y: scroll;
+}
+#todo-list::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgb(219, 219, 219);
+  border-radius: 10px;
+}
+#todo-list::-webkit-scrollbar-thumb {
+  background-color: rgb(185, 185, 185);
+  border-radius: 10px;
+}
+
+#todo-list li {
+  margin: 15px 10px;
+  border-bottom: 1px dashed gray;
+}
+
+#todo-list li span {
+  font-size: large;
+}
+
+#todo-list li button {
+  float: right;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.quote {
+  position: absolute;
+  bottom: 20px;
+  width: 99vw;
+  text-align: center;
+}
+.quote span{
+  display: block;
+  color: rgba(240, 248, 255, 0.6);
 }
