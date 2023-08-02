@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <style>
+        td {
+            border-radius: 50px;
+            color: white;
+            background-color: rgb(255, 155, 189);
+            padding: 15px 15px;
+            width: 100px;
+            text-align: center;
+            font-size: 33px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            text-align: right;
+            border: none;
+            outline: none;
+            width: 280px;
+            font-size: 30px;
+            padding-bottom: 7px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#cal{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">my calculator</h1>
+    <div>
+
+    </div>
+    <div id="cal">
+        <div>
+            <input type="text" id="display"><br>
+            <input type="text" id="result">
+    <table style="width: 300px;">
+        <tr>
+            <td colspan="3" onclick="AC()">AC</td>
+            <td onclick="show('/')">/</td>
+        </tr>
+        <tr>
+            <td onclick="show(1)">1</td>
+            <td onclick="show(2)">2</td>
+            <td onclick="show(3)">3</td>
+            <td onclick="show('*')">*</td>
+        </tr>
+        <tr>
+            <td onclick="show(4)">4</td>
+            <td onclick="show(5)">5</td>
+            <td onclick="show(6)">6</td>
+            <td onclick="show('+')">+</td>
+        </tr>
+        <tr>
+            <td onclick="show(7)">7</td>
+            <td onclick="show(8)">8</td>
+            <td onclick="show(9)">9</td>
+            <td onclick="show('-')">-</td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="show(0)">0</td>
+            <td onclick="show('.')">.</td>
+            <td onclick="culcalate()">=</td>
+        </tr>
+    </table></div>
+</div>
+
+<script>
+    var input = document.getElementById('display').value;
+    var key =false;
+    var end = false;
+    function show(char) {
+        if(isNaN(char)==true){
+            if(end==true){
+                document.getElementById('display').value = document.getElementById('result').value+char;
+                document.getElementById('result').value="";
+                end=false;
+                key=false;
+            }
+            else if(key==true){
+                document.getElementById('display').value+=char;
+                key=false;
+            }
+        }
+        else {
+            if(end==true){
+                AC();
+            }
+            document.getElementById('display').value+=char;
+            key=true;
+            end=false;
+        }
+    }
+    function culcalate(){
+        if(key==true){
+            var result = eval(document.getElementById('display').value);
+            document.getElementById('result').value = result;
+            end=true;
+        }
+    }
+    function AC(){
+        document.getElementById('display').value ="";
+        document.getElementById('result').value="";
+    }
+
+    
+</script>
+</body>
+</html>
