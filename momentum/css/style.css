@@ -72,44 +72,52 @@ body *{
   overflow: hidden;
 }
 
+#todo * {
+  font-family: 'NanumMiNiSonGeurSsi';
+}
+
 #todo-form input{
   width: 96%;
   height: 50px;
   margin: 0 2%;
   padding: 0;
-  font-size: 20px;
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
   outline: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-size: 30px;
 }
 
 #todo-list {
   width: 92%;
-  height: 80%;
-  overflow-y: scroll;
+  height: 75%;
+  overflow-y: auto;
+  margin-top: 20px;
 }
 #todo-list::-webkit-scrollbar {
   width: 5px;
-  background-color: rgb(219, 219, 219);
+  background-color: rgb(131, 131, 131);
   border-radius: 10px;
 }
 #todo-list::-webkit-scrollbar-thumb {
-  background-color: rgb(185, 185, 185);
+  background-color: rgb(71, 71, 71);
   border-radius: 10px;
 }
 
 #todo-list li {
-  margin: 15px 10px;
+  padding: 10px 10px;
+  margin-right: 10px;
   border-bottom: 1px dashed gray;
+  font-weight: 300;
+  font-size: 30px;
+  height: 35px;
 }
 
-#todo-list li span {
-  font-size: large;
-}
 
 #todo-list li button {
   float: right;
+  line-height: 35px;
   background-color: rgba(0, 0, 0, 0);
 }
 

@@ -31,4 +31,4 @@ const author = document.querySelector(".quote span:last-child");
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerHTML = randomQuote.quote;
-author.innerHTML = randomQuote.author;
+author.innerHTML = `- ${randomQuote.author}`;
