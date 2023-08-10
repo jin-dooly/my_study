@@ -4,6 +4,10 @@
   list-style: none;
 }
 
+.hidden {
+  display: none;
+}
+
 #top-bar {
   background-color: #404040;
   position: absolute;
@@ -136,4 +140,56 @@
 }
 #greeting #delete-btn {
   float: right;
+}
+
+#main {
+  width: 700px;
+  margin: 150px auto 0 auto;
+}
+
+
+#search {
+  display: block;
+  width: 90%;
+  height: 20px;
+  border: none;
+  border-radius: 30px;
+  margin: 40px auto;
+  padding: 10px 5%;
+  box-shadow: 2px 2px 10px#dddddd;
+  outline: none;
+  font-size: 20px;
+}
+
+
+#page-list {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  border: solid #d8d8d8 2px;
+  padding: 2px 12px;
+}
+
+#create-page, td:nth-child(1) {
+  border-left: none;
+}
+
+#create-page, td:nth-child(4) {
+  border-right: none;
+}
+
+td:nth-child(1), td:nth-child(2) {
+  width: 10px;
+}
+td:nth-child(4) {
+  width: 80px;
+}
+
+#create-page {
 }

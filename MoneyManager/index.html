@@ -7,27 +7,59 @@
   <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
   <title>머니매니</title>
 </head>
-<body>
-  <div id="greeting">
-    <div class="logo"></div>
-    <div id="login-box">
-      <input type="text" placeholder="NAME" />
-      <input type="button" value="입력" id="login-btn">
-      <input type="button" value="취소" id="delete-btn">
-    </div>
-  </div>
+<body> 
 
   <div id="top-bar">
     <div id="menu-btn"><img src="img/icon_menu.png" alt="menu"></div>
     <div class="logo"></div>
     <div id="back-btn"></div>
   </div>
-  <div id="menu-bar">
+
+  <div id="menu-bar" class="hidden">
     <ul>
       <li>이름 변경하기</li>
       <li>나이트모드 <span>켜기</span></li>
       <li>ddd</li>
     </ul>
   </div>
+
+  <div id="greeting" class="hidden">
+    <div class="logo"></div>
+    <form id="login-box">
+      <input type="text" placeholder="NAME" required />
+      <input type="button" value="입력" id="login-btn">
+      <input type="button" value="취소" id="delete-btn">
+    </form>
+  </div>
+
+  <article id="main">
+      <input id="search" type="text" placeholder="검색" required />
+    <div id="page-list">
+      <table>
+        <tr>
+          <td id="create-page" colspan="4">+ 새로 만들기</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="check" id="1"></td>
+          <td>1</td>
+          <td>여행 계획 1</td>
+          <td>2023/08/10</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="check" id="2"></td>
+          <td>2</td>
+          <td>여행 계획 2</td>
+          <td>2023/08/11</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="check" id="3"></td>
+          <td>3</td>
+          <td>여행 계획 1</td>
+          <td>2023/08/00</td>
+        </tr>
+      </table>
+    </div>
+  </article>
+
 </body>
 </html>
